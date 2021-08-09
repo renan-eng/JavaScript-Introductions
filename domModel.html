@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript DOM: Como alterar o conteúdo de uma página HTML</title>
+	<style>
+		div{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		h1{
+			margin: 25px auto;
+			text-align: center;
+			width: 100%;
+			background-color: darkkhaki;
+			font-family: sans-serif;
+			color: white;
+		}
+		#botao{
+			font-size: 2rem;
+		}
+		h2{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>HTML DOM</h1>
+		<input type="button" id="botao" value="Ativar!">
+	</div>
+	<script>
+		/*
+		Existem 3 maneiras de inserir HTML em um página com JS:
+
+		1. document.write() - nunca use! pq irá substituir todo o conteúdo da página.
+		2. innerHTML - usado com frequencia.
+		3. Métodos de manipulação do DOM - mais complexo porém te oferece maior controle sobre a página.
+		*/
+
+		//1. documento.write() - utilizado somente para testar algum código.
+		//Ao clicar no botão todo o conteúdo da pagina será substituido pela Tag h2 com a string Hello Word dentro
+
+		function funcao(){
+			document.write("<h2>Hello World!</h2>")
+		}
+
+		document.getElementById("botao").onclick=function(){
+			funcao();
+		}
+	</script>	
+</body>
+</html>
