@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Função com um retorno simples</title>
+	<style>
+		div{display: flex; flex-direction: column;}
+		h1{margin: 25px auto; width: 100%; background-color: darkgoldenrod; text-align: center; font-size: 24px; font-family: sans-serif; color: white;}
+
+		#button{margin: 0px auto; width: 200px;font-size: 24px;}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>JS: FUNÇÕES</h1>
+		<input type="button" id="button" value="Mostrar nome">
+	</div>
+
+	<script>
+		//A função abaixo retorna um vetor 2 váriaveis dentro de um Array
+		//é possivel retornar quantas variáveis forem necessarias
+		function multiReturn(firstName, lastName, idade){
+			var nomeCompleto = firstName + " " + lastName;
+			var mostraIdade = "Idade: " + idade;
+			var pacoteNome = [nomeCompleto, mostraIdade];
+			return pacoteNome;
+		}
+
+		document.getElementById('button').onclick=function(){
+			var arrayNome = multiReturn("Renan", "Eduardo", 31);
+			console.log(arrayNome[0]);
+			console.log(arrayNome[1]);
+			console.log(arrayNome);
+		}
+	</script>
+</body>
+</html>

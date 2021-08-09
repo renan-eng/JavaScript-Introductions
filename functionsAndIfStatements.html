@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Função com um retorno simples</title>
+	<style>
+		div{display: flex; flex-direction: column;}
+		h1{margin: 25px auto; width: 100%; background-color: darkgoldenrod; text-align: center; font-size: 24px; font-family: sans-serif; color: white;}
+
+		#button{margin: 0px auto; width: 200px;font-size: 24px;}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>JS: FUNÇÕES</h1>
+		<input type="button" id="button" value="Mostrar nome">
+	</div>
+
+	<script>
+
+		function verificaIdade(idade) {
+			var maiorIdade;
+
+			if (idade >= 18){
+				maiorIdade = true;
+			} else {
+				maiorIdade = false;
+			}
+			return	maiorIdade;
+		}
+	
+		document.getElementById('button').onclick=function(){
+
+			console.log(verificaIdade(18));
+		
+		}
+
+
+	</script>
+</body>
+</html>
