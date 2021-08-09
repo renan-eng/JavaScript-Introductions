@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Learning JavaScript: Event Handlers</title>
+	<script>
+		/*
+			Variables: virtual containers for information
+
+			- Rules for variable names:
+
+			Names ca contain letter, digits, underscores, dollar signs.
+
+			Names must begin with a letter
+
+			Names can also begin with a letter
+
+			Names can also begin with $ and _
+
+			Names are case sensisitive (y and Y are different variables)
+
+			Reserverd words (like JavaScript keywords) cannot be used as names.
+
+			Its good to use camelCase for names creation
+
+		*/
+
+		var firstName;
+
+		firstName = "Renan";
+
+		function sniffer(message) {
+			console.log("Event: " + message); //log a message to the console (dev tools > console)
+		}
+
+		alert(firstName);
+
+	</script>
+
+	<style>
+		#secondP {width: 200px; background-color: #AFE6A5; float: right;}
+
+		p:hover, button:hover {cursor: pointer;}
+	</style>
+
+</head>
+	<body>
+		<h1>WELCOME TO JS: EVENT HANDLERS</h1>
+
+		<input type="text" id="input">
+
+		<button id="butt">Try it</button>	
+
+		<p id="firstP">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
+
+		<p id="secondP">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
+
+		<script>
+
+			// this allows you to get any tag with a known ID and execute the code between the '{}'
+		document.getElementById('butt').onmouseover=function(){
+			sniffer('Inner Sniffer');
+		}
+			
+		</script>
+	</body>
+</html>

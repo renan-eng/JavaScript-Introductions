@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Exemplo de innerHTML</title>
+		<script>
+			/*
+
+			Todos oos objetos em JavaScript possuiem suas Proriedades
+			innerHTML é uma propriedade que representa o conteúdo de um elemento HTML
+
+			*/
+
+			function exemplo1() {
+				var target = document.getElementById("first");
+				var valorAtual = target.innerHTML;
+				console.log(valorAtual);
+				if(1<4){
+					target.innerHTML = "É possível alterar qualquer valor dentro de um elemento HTML utilizando a propriedade innerHTML. Inclusive qualquer tag dentro deste elemente também será alterado."
+				}
+					}
+		</script>
+	</head>
+	<body>
+
+		<h2>Condicionais Em JavaScript</h2>
+
+		<button id="activator" type="button">InnetHTML!</button>
+
+		<p id="first">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span>...</span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dog biscuits.</p>
+		
+		<script>
+			document.getElementById("activator").onclick = function(){
+				exemplo1();
+			}
+		</script>
+
+	</body>
+</html>

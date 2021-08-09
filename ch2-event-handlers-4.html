@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" onkeypress="sniffer('You pressed a key')">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Learning JavaScript: Event Handlers</title>
+	<script>
+		function sniffer(message) {
+			console.log("Something happened: " + message); //log a message to the console (dev tools > console)
+		}
+
+		function loadFunc() {
+			var theDate = new Date();
+			alert('The page has loaded.' + theDate);			
+		}
+	</script>
+
+	<style>
+		#secondP {width: 200px; background-color: #AFE6A5;}
+
+		p:hover, button:hover {cursor: pointer;}
+	</style>
+</head>
+	<body onresize="sniffer('Windows resized')" onload="alert('page loading'), loadFunc()">
+		<h1>WELCOME TO JS: EVENT HANDLERS</h1>
+
+		<input type="text" onchange="sniffer('It changed!')">
+
+		<button id="butt">Try it</button>	
+
+		<p onclick="sniffer('p tag clicked')">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
+
+		<p id="secondP" onmouseover="sniffer('Mouse over the second paragraph!')">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
+
+		<script>
+			// this allows you to get any tag with a known ID and execute the code between the '{}'
+			document.getElementById('butt').onclick=function(){ //anonymous inner function 
+				sniffer('Inner Sniffer');
+			}
+		</script>
+	</body>
+</html>
