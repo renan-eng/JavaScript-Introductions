@@ -28,7 +28,7 @@
 	</style>
 </head>
 <body>
-	<div>
+	<div id="div">
 		<h1>HTML DOM</h1>
 		<input type="button" id="botao" value="Ativar!">
 	</div>
@@ -39,17 +39,26 @@
 		1. document.write() - nunca use! pq irá substituir todo o conteúdo da página.
 		2. innerHTML - usado com frequencia.
 		3. Métodos de manipulação do DOM - mais complexo porém te oferece maior controle sobre a página.
-		*/
+		
 
 		//1. documento.write() - utilizado somente para testar algum código.
 		//Ao clicar no botão todo o conteúdo da pagina será substituido pela Tag h2 com a string Hello Word dentro
 
 		function funcao(){
 			document.write("<h2>Hello World!</h2>")
-		}
+		}*/
+
+		//2. innerHTML exemple
+
+		var texto = "<h1>Lorem ipsum</h1> Lorem ipsum dolore et et duis minim ut aliqua aliquip laboris dolore. Officia sit nostrud nisi quis culpa sit veniam anim deserunt excepteur. Lorem ipsum occaecat anim tempor commodo veniam dolore ut pariatur voluptate nostrud do dolore occaecat elit laboris ullamco. Consequat culpa laborum laboris aliqua ad amet duis non elit velit excepteur qui voluptate ut minim eiusmod consectetur.";
+		var pegaDiv = document.getElementById("div");
+
+		pegaDiv.innerHTML = pegaDiv.innerHTML + texto;
+		//pegaDiv.innerHTML = texto;
+		console.log(pegaDiv.innerHTML);
 
 		document.getElementById("botao").onclick=function(){
-			funcao();
+			//funcao();
 		}
 	</script>	
 </body>
