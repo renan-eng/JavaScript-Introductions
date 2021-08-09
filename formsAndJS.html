@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS: FORMS</title>
+</head>
+<body>	
+	
+
+	<form name="logIn" id="formLog" action="http://studioweb.com" method="get">
+		
+		<span>Qual meu nome?</span>
+		<input type="text" name="primeiroNome" id="primeiroNome"> 
+		<!-- para que o form envie a informação para o servidor o <input> tem que ter um atributo do tipo name -->
+
+		<!-- não colocar o atributo name no botão, pois irá enviar informação desnecessária para o servidor -->
+		<input type="submit" id="submit" value="Enviar">
+
+	</form>
+
+	<p id="target"></p>
+
+<script type="text/javascript" src="validate.js"></script>
+</body>
+</html>
