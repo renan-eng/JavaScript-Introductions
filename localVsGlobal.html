@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Função com um retorno simples</title>
+	<style>
+		div{display: flex; flex-direction: column;}
+		h1{margin: 25px auto; width: 100%; background-color: darkgoldenrod; text-align: center; font-size: 24px; font-family: sans-serif; color: white;}
+
+		#button{margin: 0px auto; width: 200px;font-size: 24px;}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>JS: FUNÇÕES</h1>
+		<input type="button" id="button" value="Mostrar nome">
+	</div>
+
+	<script>
+		/*
+		Variáveis Globais: podem ser acessadas a qualquer momento durante o programa
+		Variáveis Locais: só exitem durante a exucação da função onde a variável foi criada.
+		*/
+
+		var globalVar = "global";
+
+		function escopoVariavel(){
+			var localVar = 665;
+			return localVar;
+		}
+
+		alert(globalVar);
+		//alert(localVar); erro varável não foi declarada (local)
+		alert(escopoVariavel()); //chamando a função = a variavel local será instanciada e retornada no alerta
+	</script>
+</body>
+</html>
